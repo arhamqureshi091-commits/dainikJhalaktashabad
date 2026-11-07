@@ -1,9 +1,5 @@
-## सुधार किया गया कोड
-
-```tsx
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Moon, Search } from "lucide-react";
 
 const navigationItems = [
   { href: "#", label: "होम", active: true },
@@ -65,11 +61,11 @@ function StoryImage({
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 font-sans">
+    <main className="min-h-screen bg-gray-50 font-sans text-gray-900">
       <div className="bg-gray-900 py-1 text-xs text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <span className="font-semibold">शुक्रवार, 6 नवंबर 2026</span>
+            <span className="font-semibold">शनिवार, 7 नवंबर 2026</span>
             <span className="text-gray-500" aria-hidden="true">
               |
             </span>
@@ -94,7 +90,20 @@ export default function Home() {
               aria-label="डार्क मोड बदलें"
               className="hover:text-orange-400"
             >
-              <Moon size={14} aria-hidden="true" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
             </button>
           </div>
         </div>
@@ -137,7 +146,22 @@ export default function Home() {
             className="p-2 lg:hidden"
             aria-label="मेन्यू खोलें"
           >
-            <Menu size={20} aria-hidden="true" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
           </button>
 
           <ul className="hidden gap-6 text-sm font-semibold lg:flex">
@@ -161,7 +185,21 @@ export default function Home() {
             className="p-2 hover:text-orange-400"
             aria-label="खोजें"
           >
-            <Search size={18} aria-hidden="true" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
           </button>
         </div>
       </nav>
@@ -189,9 +227,9 @@ export default function Home() {
 
           <div className="p-6">
             <span className="text-sm font-bold text-red-600">प्रमुख खबर</span>
-            <h1 className="mb-3 mt-2 text-3xl font-bold leading-tight transition hover:text-orange-600">
+            <h1 className="mb-3 mt-2 text-3xl font-bold leading-tight text-gray-900 transition hover:text-orange-600">
               <Link href="#">
-                विधानसभा में 'डिजिटल अर्थव्यवस्था विधेयक' पारित — सियासी
+                विधानसभा में &apos;डिजिटल अर्थव्यवस्था विधेयक&apos; पारित — सियासी
                 संग्राम जारी
               </Link>
             </h1>
@@ -217,7 +255,7 @@ export default function Home() {
             </Link>
             <div className="p-4">
               <span className="text-xs font-bold text-orange-600">कारोबार</span>
-              <h2 className="mt-1 text-lg font-bold leading-tight transition hover:text-orange-600">
+              <h2 className="mt-1 text-lg font-bold leading-tight text-gray-900 transition hover:text-orange-600">
                 <Link href="#">
                   सेंसेक्स 80,000 के पार — तेजी जारी, निवेशकों में खुशी
                 </Link>
@@ -235,7 +273,7 @@ export default function Home() {
             </Link>
             <div className="p-4">
               <span className="text-xs font-bold text-orange-600">म.प्र.</span>
-              <h2 className="mt-1 text-lg font-bold leading-tight transition hover:text-orange-600">
+              <h2 className="mt-1 text-lg font-bold leading-tight text-gray-900 transition hover:text-orange-600">
                 <Link href="#">
                   शीतलहर चेतावनी — भोपाल-ग्वालियर समेत 15 शहरों के लिए अलर्ट
                 </Link>
@@ -281,7 +319,7 @@ export default function Home() {
                   <span className="text-xs font-bold text-orange-600">
                     {story.category}
                   </span>
-                  <h3 className="mt-1 text-lg font-bold leading-tight transition hover:text-orange-600">
+                  <h3 className="mt-1 text-lg font-bold leading-tight text-gray-900 transition hover:text-orange-600">
                     <Link href="#">{story.title}</Link>
                   </h3>
                   <p className="mt-2 text-xs text-gray-500">{story.time}</p>
@@ -293,7 +331,7 @@ export default function Home() {
 
         <aside className="flex flex-col gap-6" aria-label="अतिरिक्त जानकारी">
           <section className="rounded border border-orange-200 bg-orange-50 p-6 text-center">
-            <h2 className="mb-2 text-lg font-bold">
+            <h2 className="mb-2 text-lg font-bold text-gray-900">
               सदस्य बनें, हमारा साथ दें
             </h2>
             <p className="mb-4 text-sm text-gray-700">
@@ -308,14 +346,14 @@ export default function Home() {
           </section>
 
           <section className="rounded bg-white p-5 shadow">
-            <h2 className="mb-4 border-b pb-2 text-lg font-bold">
+            <h2 className="mb-4 border-b pb-2 text-lg font-bold text-gray-900">
               सबसे ज़्यादा पढ़ी गई
             </h2>
             <ol className="list-inside list-decimal space-y-4 text-sm font-semibold text-gray-800">
               {popularStories.map((story) => (
                 <li
                   key={story}
-                  className="border-b border-gray-100 pb-2 transition hover:text-orange-600"
+                  className="border-b border-gray-100 pb-2 transition last:border-none last:pb-0 hover:text-orange-600"
                 >
                   <Link href="#" className="focus-visible:underline">
                     {story}
@@ -337,4 +375,3 @@ export default function Home() {
     </main>
   );
 }
-```
