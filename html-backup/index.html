@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="दैनिक झलकते शब्द — मध्य प्रदेश की भरोसेमंद खबरें। ताज़ा समाचार, खेल, कारोबार, टेक्नोलॉजी और मनोरंजन।" />
+  <title>दैनिक झलकते शब्द — म.प्र. की भरोसेमंद खबरें</title>
+
+  <!-- Fonts (Hindi ke liye Devanagari) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ TOP UTILITY BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span id="live-date">शुक्रवार, 6 नवंबर 2026</span>
+        <span class="topbar-sep">|</span>
+        <span class="muted">भोपाल • इंदौर • ग्वालियर • जबलपुर</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="topbar-link" aria-label="Facebook">f</a>
+        <a href="#" class="topbar-link" aria-label="X">𝕏</a>
+        <a href="#" class="topbar-link" aria-label="Instagram">◎</a>
+        <a href="#" class="topbar-link" aria-label="YouTube">▶</a>
+        <button id="themeToggle" class="theme-toggle" title="डार्क मोड बदलें">🌙</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <div class="masthead-side left">
+        <span class="chip">ई-पेपर</span>
+        <span class="muted small">ताज़ा खबरें @ 09:41</span>
+      </div>
+      <a href="#" class="logo">दैनिक <span>झलकते शब्द</span></a>
+      <div class="masthead-side right">
+        <a href="#" class="btn-subscribe">सदस्यता लें</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <button class="hamburger" id="hamburger" aria-label="मेन्यू">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">होम</a></li>
+        <li><a href="category.html?cat=mp">म.प्र.</a></li>
+        <li><a href="category.html?cat=world">देश-दुनिया</a></li>
+        <li><a href="category.html?cat=business">कारोबार</a></li>
+        <li><a href="category.html?cat=sports">खेल</a></li>
+        <li><a href="category.html?cat=tech">टेक्नोलॉजी</a></li>
+        <li><a href="category.html?cat=entertainment">मनोरंजन</a></li>
+        <li><a href="category.html?cat=health">स्वास्थ्य</a></li>
+        <li><a href="article.html">संपादकीय</a></li>
+      </ul>
+      <button class="search-btn" id="searchBtn" aria-label="खोजें">🔍</button>
+    </div>
+
+    <!-- Search overlay -->
+    <div class="search-panel" id="searchPanel">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="खबरें खोजें… जैसे क्रिकेट, मौसम, इंदौर" autocomplete="off" />
+        <div id="searchResults" class="search-results">
+          <p class="search-hint">खबरें खोजने के लिए कोई शब्द लिखें — जैसे क्रिकेट, मौसम, इंदौर…</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ BREAKING TICKER ============ -->
+  <div class="ticker">
+    <span class="ticker-label">ब्रेकिंग</span>
+    <div class="ticker-viewport">
+      <div class="ticker-track" id="tickerTrack"><!-- JS --></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="container hero">
+      <article class="card hero-main">
+        <a href="#">
+          <div class="thumb-wrap">
+            <img src="images/vidhan-sabha.jpg" alt="मध्य प्रदेश विधानसभा, भोपाल" />
+            <span class="badge live">लाइव</span>
+          </div>
+        </a>
+        <div class="card-body">
+          <span class="kicker">प्रमुख खबर</span>
+          <h1><a href="article.html">विधानसभा में 'डिजिटल अर्थव्यवस्था विधेयक' पारित — सियासी संग्राम जारी</a></h1>
+          <p class="summary">
+            रात 2 बजे तक चली बहस के बाद विधेयक पारित हुआ। इसमें ऑनलाइन पेमेंट, डेटा सुरक्षा और
+            फ्रीलांसरों के पंजीकरण का ढांचा रखा गया है। प्रशासनिक सूत्रों ने इसे दशक का सबसे
+            बड़ा आर्थिक सुधार बताया।
+          </p>
+          <div class="meta"><span class="meta-time">2 घंटे पहले</span> · <span>राजनीति</span></div>
+        </div>
+      </article>
+
+      <div class="hero-side">
+        <article class="card hero-sub">
+          <a href="#">
+            <div class="thumb-wrap">
+              <img src="images/rupee.jpg" alt="शेयर बाज़ार" />
+            </div>
+          </a>
+          <div class="card-body">
+            <span class="kicker">कारोबार</span>
+            <h2><a href="article.html">सेंसेक्स 80,000 के पार — तेजी जारी, निवेशकों में खुशी</a></h2>
+            <div class="meta"><span class="meta-time">43 मिनट पहले</span></div>
+          </div>
+        </article>
+
+        <article class="card hero-sub">
+          <a href="#">
+            <div class="thumb-wrap">
+              <img src="images/monsoon.jpg" alt="मौसम" />
+            </div>
+          </a>
+          <div class="card-body">
+            <span class="kicker">म.प्र.</span>
+            <h2><a href="article.html">शीतलहर चेतावनी — भोपाल-ग्वालियर समेत 15 शहरों के लिए अलर्ट</a></h2>
+            <div class="meta"><span class="meta-time">1 घंटा पहले</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ MAIN GRID ============ -->
+    <div class="container main-grid">
+
+      <!-- ===== CONTENT ===== -->
+      <div class="content">
+
+        <!-- प्रमुख खबरें -->
+        <section class="section" id="top-stories">
+          <div class="section-head">
+            <h2 class="section-title">प्रमुख खबरें</h2>
+            <a href="category.html?cat=mp" class="see-all">और देखें →</a>
+          </div>
+          <div class="story-grid">
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/city-traffic/600/400" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker">देश</span>
+                <h3><a href="article.html">संसद में दिखा दुर्लभ सर्वसम्मति — जलवायु सम्मेलन से पहले राज्यों के लिए नई वित्तीय सहायता योजनाएँ घोषित, जानिए किसे मिलेगा सबसे ज़्यादा फ़ायदा</a></h3>
+                <div class="meta"><span class="meta-time">3 घंटे पहले</span> · <span>देश</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="images/cricket.jpg" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker">खेल</span>
+                <h3><a href="article.html">आख़िरी ओवर के नाटक में टीम इंडिया ने सीरीज़ जीती</a></h3>
+                <div class="meta"><span class="meta-time">4 घंटे पहले</span> · <span>खेल</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/tech-lab/600/400" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker">टेक</span>
+                <h3><a href="article.html">इंदौर के एआई स्टार्टअप को 100 करोड़ रुपये का फंड मिला</a></h3>
+                <div class="meta"><span class="meta-time">5 घंटे पहले</span> · <span>टेक</span></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/court-gavel/600/400" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker">म.प्र.</span>
+                <h3><a href="article.html">हाईकोर्ट में नगर निगम सफाई मामले का फैसला सुरक्षित</a></h3>
+                <div class="meta"><span class="meta-time">6 घंटे पहले</span> · <span>कोर्ट</span></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ताज़ा खबरें (JS) -->
+        <section class="section" id="latest">
+          <div class="section-head">
+            <h2 class="section-title">ताज़ा खबरें</h2>
+            <a href="#" class="see-all">और →</a>
+          </div>
+          <div class="latest-list" id="latestList"><!-- JS --></div>
+          <button class="btn-load" id="loadMoreBtn">और खबरें लोड करें</button>
+        </section>
+
+        <!-- खेल (dark strip) -->
+        <section class="section section-dark" id="sports">
+          <div class="section-head">
+            <h2 class="section-title light">खेल</h2>
+            <a href="category.html?cat=sports" class="see-all light">सारा खेल →</a>
+          </div>
+          <div class="story-grid">
+
+            <article class="card dark">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/football-match/600/400" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker gold">क्रिकेट</span>
+                <h3><a href="article.html">आखिरी ओवर में जबरदस्त पलटगार, सीरीज़ 3-2 से भारत की</a></h3>
+              </div>
+            </article>
+
+            <article class="card dark">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/tennis-court/600/400" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker gold">बैडमिंटन</span>
+                <h3><a href="article.html">किशोर सितारे ने विश्व नं. 2 को सीधे सेटों में हराया</a></h3>
+              </div>
+            </article>
+
+            <article class="card dark">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/hockey-field/600/400" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <span class="kicker gold">हॉकी</span>
+                <h3><a href="article.html">स्वर्ण युग की ओर — टीम विश्व कप के लिए क्वालीफाई</a></h3>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- टेक + मनोरंजन -->
+        <div class="section-grid-2">
+
+          <section class="section" id="tech">
+            <div class="section-head">
+              <h2 class="section-title">टेक्नोलॉजी</h2>
+            </div>
+            <article class="card horizontal">
+              <a href="article.html"><div class="thumb-wrap small">
+                <img src="https://picsum.photos/seed/ai-chip/300/220" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">नवाचार: नए एआई चिप में बिजली 40% तक कम खर्च</a></h3>
+                <div class="meta"><span class="meta-time">1 घंटा पहले</span></div>
+              </div>
+            </article>
+            <article class="card horizontal">
+              <a href="article.html"><div class="thumb-wrap small">
+                <img src="https://picsum.photos/seed/smartphone/300/220" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">त्योहारों में फोल्डेबल फोन की बिक्री रिकॉर्ड स्तर पर</a></h3>
+                <div class="meta"><span class="meta-time">2 घंटे पहले</span></div>
+              </div>
+            </article>
+            <article class="card horizontal">
+              <a href="article.html"><div class="thumb-wrap small">
+                <img src="https://picsum.photos/seed/drone-sky/300/220" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">मध्य प्रदेश के जिलों में ड्रोन डिलीवरी का प्रायोगिक दौर</a></h3>
+                <div class="meta"><span class="meta-time">3 घंटे पहले</span></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="section" id="entertainment">
+            <div class="section-head">
+              <h2 class="section-title">मनोरंजन</h2>
+            </div>
+            <article class="card horizontal">
+              <a href="article.html"><div class="thumb-wrap small">
+                <img src="https://picsum.photos/seed/cinema-street/300/220" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">बॉक्स ऑफिस: कमबैक फिल्म ने ₹100 करोड़ पार किए</a></h3>
+                <div class="meta"><span class="meta-time">1 घंटा पहले</span></div>
+              </div>
+            </article>
+            <article class="card horizontal">
+              <a href="article.html"><div class="thumb-wrap small">
+                <img src="https://picsum.photos/seed/concert-lights/300/220" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">वर्ल्ड टूर का ऐलान — टिकट इस शनिवार ऑनलाइन बिकेंगी</a></h3>
+                <div class="meta"><span class="meta-time">4 घंटे पहले</span></div>
+              </div>
+            </article>
+            <article class="card horizontal">
+              <a href="article.html"><div class="thumb-wrap small">
+                <img src="https://picsum.photos/seed/tv-studio/300/220" alt="" loading="lazy" />
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">नया वेब सीरीज़ पहली रात ही रिकॉर्ड तोड़ दिया</a></h3>
+                <div class="meta"><span class="meta-time">5 घंटे पहले</span></div>
+              </div>
+            </article>
+          </section>
+
+        </div>
+
+        <!-- तस्वीरें -->
+        <section class="section" id="in-pictures">
+          <div class="section-head">
+            <h2 class="section-title">तस्वीरें</h2>
+          </div>
+          <div class="story-grid">
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="images/bhopal-mandir.jpg" alt="" loading="lazy" />
+                <span class="play-overlay">📷</span>
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">भोपाल की विरासत — बिरला मंदिर की सुंदर तस्वीरें</a></h3>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/mountain-hike/600/400" alt="" loading="lazy" />
+                <span class="play-overlay">📷</span>
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">पतझर में सतपुड़ा — सुनहरी घाटियों की तस्वीरें</a></h3>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="article.html"><div class="thumb-wrap">
+                <img src="https://picsum.photos/seed/street-market/600/400" alt="" loading="lazy" />
+                <span class="play-overlay">📷</span>
+              </div></a>
+              <div class="card-body">
+                <h3><a href="article.html">इंदौर का सर्राफ़ा बाज़ार — भीड़ और चमक के 12 फ्रेम</a></h3>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar">
+
+        <div class="promo-box">
+          <h3>सदस्य बनें, हमारा साथ दें</h3>
+          <p>सभी खबरें, ई-पेपर और न्यूज़लेटर — बिना विज्ञापन रुकावट के।</p>
+          <a href="#" class="btn-subscribe block">सदस्यता लें</a>
+        </div>
+
+        <section class="most-read">
+          <h3 class="most-read-title">सबसे ज़्यादा पढ़ी गई</h3>
+          <ol id="mostReadList">
+            <li><a href="#">हाईकोर्ट में नगर निगम सफाई मामले का फैसला सुरक्षित</a></li>
+            <li><a href="#">सेंसेक्स 80,000 के पार, तेजी जारी</a></li>
+            <li><a href="#">विधानसभा में डिजिटल अर्थव्यवस्था विधेयक पारित</a></li>
+            <li><a href="#">शीतलहर चेतावनी — 15 शहरों के लिए अलर्ट जारी</a></li>
+            <li><a href="#">किशोर बैडमिंटन सितारे ने विश्व नं. 2 को हराया</a></li>
+          </ol>
+        </section>
+
+        <div class="ad-box">विज्ञापन — 300 × 250</div>
+
+        <section class="tags">
+          <h3 class="most-read-title">ट्रेंडिंग टैग</h3>
+          <div class="tag-cloud">
+            <a href="#">#चुनाव</a><a href="#">#शेयरबाज़ार</a><a href="#">#क्रिकेट</a>
+            <a href="#">#एआई</a><a href="#">#बजट</a><a href="#">#मनोरंजन</a>
+            <a href="#">#मौसम</a><a href="#">#शिक्षा</a>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+
+    <!-- ============ राशिफल (हार्जिज़ॉन्टल स्क्रॉल) ============ -->
+    <section class="rashifal" id="rashifal">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">आज का राशिफल</h2>
+          <span class="rashi-date" id="rashiDate"></span>
+        </div>
+        <div class="rashifal-scroll" id="rashifalScroll"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <h2>दिन की टॉप खबरें — सीधे इनबॉक्स में</h2>
+          <p>हर रोज़ सुबह एक ईमेल। हमेशा मुफ़्त।</p>
+        </div>
+        <form id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="आपका ईमेल" required />
+          <button type="submit">सब्सक्राइब करें</button>
+          <p class="form-msg" id="formMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo small">दैनिक <span>दर्पण</span></a>
+        <p>मध्य प्रदेश का आधुनिक हिंदी अख़बार — रोज़ सटीक और निर्भीक पत्रकारिता।</p>
+      </div>
+      <div>
+        <h4>अनुभाग</h4>
+        <ul>
+          <li><a href="#">म.प्र.</a></li><li><a href="#">देश-दुनिया</a></li>
+          <li><a href="#">कारोबार</a></li><li><a href="#">खेल</a></li>
+          <li><a href="#">टेक्नोलॉजी</a></li><li><a href="#">मनोरंजन</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>कंपनी</h4>
+        <ul>
+          <li><a href="#">हमारे बारे में</a></li><li><a href="#">करियर</a></li>
+          <li><a href="#">विज्ञापन दें</a></li><li><a href="#">संपर्क करें</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>कानूनी</h4>
+        <ul>
+          <li><a href="#">गोपनीयता नीति</a></li><li><a href="#">उपयोग की शर्तें</a></li>
+          <li><a href="#">कुकी नीति</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        © 2026 दैनिक झलकते शब्द। सर्वाधिकार सुरक्षित। <span>सीखने के उद्देश्य से बनाया गया फ्रंट-एंड प्रोजेक्ट।</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" title="ऊपर चलें">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

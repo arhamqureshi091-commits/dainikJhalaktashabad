@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="दैनिक झलकते शब्द — श्रेणी वार खबरें: म.प्र., देश-दुनिया, कारोबार, खेल, टेक्नोलॉजी, मनोरंजन, स्वास्थ्य।" />
+  <title>श्रेणी — दैनिक झलकते शब्द</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span id="live-date">शुक्रवार, 6 नवंबर 2026</span>
+        <span class="topbar-sep">|</span>
+        <span class="muted">भोपाल • इंदौर • ग्वालियर • जबलपुर</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="topbar-link" aria-label="Facebook">f</a>
+        <a href="#" class="topbar-link" aria-label="X">𝕏</a>
+        <a href="#" class="topbar-link" aria-label="Instagram">◎</a>
+        <a href="#" class="topbar-link" aria-label="YouTube">▶</a>
+        <button id="themeToggle" class="theme-toggle" title="डार्क मोड बदलें">🌙</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <div class="masthead-side left">
+        <span class="chip">ई-पेपर</span>
+        <span class="muted small">ताज़ा खबरें @ 09:41</span>
+      </div>
+      <a href="index.html" class="logo">दैनिक <span>झलकते शब्द</span></a>
+      <div class="masthead-side right">
+        <a href="#" class="btn-subscribe">सदस्यता लें</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <button class="hamburger" id="hamburger" aria-label="मेन्यू">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">होम</a></li>
+        <li><a href="category.html?cat=mp">म.प्र.</a></li>
+        <li><a href="category.html?cat=world">देश-दुनिया</a></li>
+        <li><a href="category.html?cat=business">कारोबार</a></li>
+        <li><a href="category.html?cat=sports">खेल</a></li>
+        <li><a href="category.html?cat=tech">टेक्नोलॉजी</a></li>
+        <li><a href="category.html?cat=entertainment">मनोरंजन</a></li>
+        <li><a href="category.html?cat=health">स्वास्थ्य</a></li>
+        <li><a href="article.html">संपादकीय</a></li>
+      </ul>
+      <button class="search-btn" id="searchBtn" aria-label="खोजें">🔍</button>
+    </div>
+
+    <div class="search-panel" id="searchPanel">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="खबरें खोजें… जैसे क्रिकेट, मौसम, इंदौर" autocomplete="off" />
+        <div id="searchResults" class="search-results">
+          <p class="search-hint">खबरें खोजने के लिए कोई शब्द लिखें — जैसे क्रिकेट, मौसम, इंदौर…</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <p class="breadcrumb"><a href="index.html">होम</a> › <span id="crumbCat">—</span></p>
+
+      <!-- Heading + tabs -->
+      <div class="cat-head">
+        <h1 class="section-title big" id="catTitle">—</h1>
+        <span class="cat-count" id="catCount"></span>
+      </div>
+
+      <!-- Quick tabs -->
+      <div class="cat-tabs" id="catTabs">
+        <a href="category.html?cat=mp" data-cat="mp">म.प्र.</a>
+        <a href="category.html?cat=world" data-cat="world">देश-दुनिया</a>
+        <a href="category.html?cat=business" data-cat="business">कारोबार</a>
+        <a href="category.html?cat=sports" data-cat="sports">खेल</a>
+        <a href="category.html?cat=tech" data-cat="tech">टेक्नोलॉजी</a>
+        <a href="category.html?cat=entertainment" data-cat="entertainment">मनोरंजन</a>
+        <a href="category.html?cat=health" data-cat="health">स्वास्थ्य</a>
+      </div>
+
+      <!-- Featured (1 bar + 3 side) -->
+      <section class="cat-featured">
+        <div id="catFeatured"><!-- JS --></div>
+        <div class="lst" id="catSideList"><!-- JS --></div>
+      </section>
+
+      <!-- Rest grid -->
+      <section class="section" id="catRest">
+        <div class="story-grid" id="catGrid"><!-- JS --></div>
+        <button class="btn-load" id="catLoadBtn">और खबरें लोड करें</button>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo small">दैनिक <span>झलकते शब्द</span></a>
+        <p>मध्य प्रदेश का आधुनिक हिंदी अख़बार — रोज़ सटीक और निर्भीक पत्रकारिता।</p>
+      </div>
+      <div>
+        <h4>अनुभाग</h4>
+        <ul>
+          <li><a href="category.html?cat=mp">म.प्र.</a></li><li><a href="category.html?cat=world">देश-दुनिया</a></li>
+          <li><a href="category.html?cat=business">कारोबार</a></li><li><a href="category.html?cat=sports">खेल</a></li>
+          <li><a href="category.html?cat=tech">टेक्नोलॉजी</a></li><li><a href="category.html?cat=entertainment">मनोरंजन</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>कंपनी</h4>
+        <ul>
+          <li><a href="#">हमारे बारे में</a></li><li><a href="#">करियर</a></li>
+          <li><a href="#">विज्ञापन दें</a></li><li><a href="#">संपर्क करें</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>कानूनी</h4>
+        <ul>
+          <li><a href="#">गोपनीयता नीति</a></li><li><a href="#">उपयोग की शर्तें</a></li>
+          <li><a href="#">कुकी नीति</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        © 2026 दैनिक झलकते शब्द। सर्वाधिकार सुरक्षित। <span>सीखने के उद्देश्य से बनाया गया फ्रंट-एंड प्रोजेक्ट।</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="ऊपर चलें">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/category.js"></script>
+</body>
+</html>
