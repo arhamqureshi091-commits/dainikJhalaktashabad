@@ -3,16 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Required for GitHub Pages static deployment
   output: 'export',
+  
+  // Required because GitHub Pages cannot host the default Next.js Image Optimization API
   images: {
     unoptimized: true,
   },
   
-  // Your existing configurations
-  experimental: {
-    agentFeedback: true,
-  },
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {
